@@ -1,23 +1,12 @@
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Stats from "./Stats";
-import Business from "./Business";
-import Billing from "./Billing";
-import CardDeal from "./CardDeal";
-import Testimonials from "./Testimonials";
-import Clients from "./Clients";
-import CTA from "./CTA";
-import Footer from "./Footer";
+import Navbar from './navbars'
+import Hero from './heros'
+import Stats from './stat'
+import Business from './busines'
+import Billing from './billings'
+import CardDeal from './card-deal'
+import Testimonials from './testimonial'
+import Clients from './client'
+import CTA from './call-to-action'
+import Footer from './footers'
 
-export {
-  Navbar,
-  Billing,
-  CardDeal,
-  Business,
-  Clients,
-  Hero,
-  CTA,
-  Stats,
-  Footer,
-  Testimonials,
-};
+export { Navbar, Billing, CardDeal, Business, Clients, Hero, CTA, Stats, Footer, Testimonials }
