@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import styles from "./style";
+import styles from './style'
 import {
   Navbar,
   Hero,
@@ -12,11 +12,11 @@ import {
   Billing,
   CTA,
   Footer,
-} from "./components";
+} from './components'
 
-function App() {
+export default function App() {
   return (
-    <div className="bg-primary w-full overflow-hidden">
+    <div className='w-full overflow-hidden bg-primary'>
       <div className={`${styles.flexCenter} ${styles.paddingX}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
@@ -42,7 +42,5 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-export default App;
