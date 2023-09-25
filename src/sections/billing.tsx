@@ -1,6 +1,6 @@
-import bill from '../assets/bill.png'
-import apple from '../assets/apple.svg'
-import google from '../assets/google.svg'
+import bill from '/bill.png'
+import apple from '/apple.svg'
+import google from '/google.svg'
 
 export default function Billing() {
   return (

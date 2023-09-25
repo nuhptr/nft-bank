@@ -1,5 +1,5 @@
 import { footerLinks, socialMedia } from '../constant'
-import logo from '../assets/logo.svg'
+import logo from '/logo.svg'
 
 export default function Footer() {
   return (

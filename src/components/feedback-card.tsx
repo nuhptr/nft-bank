@@ -1,4 +1,4 @@
-import quotes from '../assets/quotes.svg'
+import quotes from '/quotes.svg'
 
 interface FeedbackCardProps {
   content: string

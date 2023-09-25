@@ -1,6 +1,5 @@
-import card from '../assets/card.png'
-
 import { Button } from '../components'
+import card from '/card.png'
 
 export default function CardDeal() {
   return (

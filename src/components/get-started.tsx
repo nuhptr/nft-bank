@@ -1,4 +1,4 @@
-import arrowup from '../assets/arrow-up.svg'
+import arrowup from '/arrow-up.svg'
 
 export default function GetStarted() {
   return (
