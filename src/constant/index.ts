@@ -1,3 +1,18 @@
+import star from '../assets/star.svg'
+import shield from '../assets/shield.svg'
+import send from '../assets/send.svg'
+import people01 from '../assets/people01.png'
+import people02 from '../assets/people02.png'
+import people03 from '../assets/people03.png'
+import instagram from '../assets/instagram.svg'
+import facebook from '../assets/facebook.svg'
+import twitter from '../assets/twitter.svg'
+import linkedin from '../assets/linkedin.svg'
+import airbnb from '../assets/airbnb.png'
+import binance from '../assets/binance.png'
+import coinbase from '../assets/coinbase.png'
+import dropbox from '../assets/dropbox.png'
+
 // TODO: Navlinks
 export const navLinks = [
   { id: 'home', title: 'Home', href: '/' },
@@ -10,19 +25,19 @@ export const navLinks = [
 export const features = [
   {
     id: 'feature-1',
-    icon: '../assets/star.svg',
+    icon: star,
     title: 'Rewards',
     content: 'The best credit cards offer some tantalizing combinations of promotions and prizes',
   },
   {
     id: 'feature-2',
-    icon: '../assets/shield.svg',
+    icon: shield,
     title: '100% Secured',
     content: 'We take proactive steps make sure your information and transactions are secure.',
   },
   {
     id: 'feature-3',
-    icon: '../assets/send.svg',
+    icon: send,
     title: 'Balance Transfer',
     content: 'A balance transfer credit card can save you a lot of money in interest charges.',
   },
@@ -36,14 +51,14 @@ export const feedback = [
       'Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.',
     name: 'Herman Jensen',
     title: 'Founder & Leader',
-    img: '../assets/people01.png',
+    img: people01,
   },
   {
     id: 'feedback-2',
     content: "Money makes your life easier. If you're lucky to have it, you're lucky.",
     name: 'Steve Mark',
     title: 'Founder & Leader',
-    img: '../assets/people02.png',
+    img: people02,
   },
   {
     id: 'feedback-3',
@@ -51,7 +66,7 @@ export const feedback = [
       'It is usually people in the money business, finance, and international trade that are really rich.',
     name: 'Kenn Gallagher',
     title: 'Founder & Leader',
-    img: '../assets/people03.png',
+    img: people03,
   },
 ]
 
@@ -95,16 +110,16 @@ export const footerLinks = [
 
 // TODO: SocialMedia
 export const socialMedia = [
-  { id: 'social-media-1', icon: '../assets/instagram.svg', link: 'https://www.instagram.com/' },
-  { id: 'social-media-2', icon: '../assets/facebook.svg', link: 'https://www.facebook.com/' },
-  { id: 'social-media-3', icon: '../assets/twitter.svg', link: 'https://www.twitter.com/' },
-  { id: 'social-media-4', icon: '../assets/linkedin.svg', link: 'https://www.linkedin.com/' },
+  { id: 'social-media-1', icon: instagram, link: 'https://www.instagram.com/' },
+  { id: 'social-media-2', icon: facebook, link: 'https://www.facebook.com/' },
+  { id: 'social-media-3', icon: twitter, link: 'https://www.twitter.com/' },
+  { id: 'social-media-4', icon: linkedin, link: 'https://www.linkedin.com/' },
 ]
 
 // TODO: clients
 export const clients = [
-  { id: 'client-1', logo: '../assets/airbnb.png' },
-  { id: 'client-2', logo: '../assets/binance.png' },
-  { id: 'client-3', logo: '../assets/coinbase.png' },
-  { id: 'client-4', logo: '../assets/dropbox.png' },
+  { id: 'client-1', logo: airbnb },
+  { id: 'client-2', logo: binance },
+  { id: 'client-3', logo: coinbase },
+  { id: 'client-4', logo: dropbox },
 ]

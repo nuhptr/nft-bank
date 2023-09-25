@@ -1,3 +1,5 @@
+import card from '../assets/card.png'
+
 import { Button } from '../components'
 
 export default function CardDeal() {
@@ -14,7 +16,7 @@ export default function CardDeal() {
       </div>
 
       <div className='section-img'>
-        <img src={'../assets/card.png'} alt='card' className='w-[100%] h-[100%]' />
+        <img src={card} alt='card' className='w-[100%] h-[100%]' />
       </div>
     </section>
   )

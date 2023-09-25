@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+import logo from '../assets/logo.svg'
+import menu from '../assets/menu.svg'
+import close from '../assets/close.svg'
+
 import { navLinks } from '../constant'
 
 export default function Navbar() {
@@ -7,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav className='flex items-center justify-between w-full py-6 navbar'>
-      <img src={'../assets/logo.svg'} alt='hoobank' className='w-[124px] h-[32px]' />
+      <img src={logo} alt='hoobank' className='w-[124px] h-[32px]' />
       <ul className='items-center justify-end flex-1 hidden list-none sm:flex'>
         {navLinks.map((nav, index) => (
           <li
@@ -21,7 +25,7 @@ export default function Navbar() {
 
       <div className='flex items-center justify-end flex-1 sm:hidden'>
         <img
-          src={toogle ? '../assets/close.svg' : '../assets/menu.svg'}
+          src={toogle ? close : menu}
           alt='menu'
           className='w-[28px] h-[28px] object-contain'
           onClick={() => setToogle(!toogle)}
@@ -36,8 +40,9 @@ export default function Navbar() {
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className={`font-poppins font-normal cursor-pointer text-[16px] 
-            ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white`}>
+              className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
+              } text-white`}>
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
