@@ -1,4 +1,3 @@
-import { logo } from '../assets'
 import { footerLinks, socialMedia } from '../constant'
 
 export default function Footer() {
@@ -6,7 +5,11 @@ export default function Footer() {
     <section className='flex-col flex-center padding-y'>
       <div className='flex-col w-full mb-8 flex-start md:flex-row'>
         <div className='flex flex-col justify-start flex-1'>
-          <img src={logo} alt='hoobank' className='w-[266px] h-[72px] object-contain' />
+          <img
+            src={'../assets/logo.svg'}
+            alt='hoobank'
+            className='w-[266px] h-[72px] object-contain'
+          />
           <p className='paragraph mt-4 max-w-[310px]'>
             A new way to make the payments easy, reliable and secure.
           </p>

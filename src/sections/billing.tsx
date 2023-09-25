@@ -1,11 +1,13 @@
-import { apple, bill, google } from '../assets'
-
 export default function Billing() {
   return (
     <section id='product' className='section-reverse'>
       {/* image and gradient background */}
       <div className='section-img-reverse'>
-        <img src={bill} alt='billing' className='w-[100%] h-[100%] relative z-[5]' />
+        <img
+          src={'../assets/bill.png'}
+          alt='billing'
+          className='w-[100%] h-[100%] relative z-[5]'
+        />
         <div className='absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient' />
         <div className='absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient' />
       </div>
@@ -24,12 +26,12 @@ export default function Billing() {
         {/* icon apple and google play */}
         <div className='flex flex-row flex-wrap mt-6 sm:mt-10'>
           <img
-            src={apple}
+            src={'../assets/apple.svg'}
             alt='apple_store'
             className='w-[128px] h-[42px] object-contain mr-5 cursor-pointer'
           />
           <img
-            src={google}
+            src={'../assets/google.svg'}
             alt='play_store'
             className='w-[128px] h-[42px] object-contain cursor-pointer'
           />

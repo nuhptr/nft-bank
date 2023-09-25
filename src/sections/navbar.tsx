@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import { close, logo, menu } from '../assets'
 import { navLinks } from '../constant'
 
 export default function Navbar() {
@@ -8,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav className='flex items-center justify-between w-full py-6 navbar'>
-      <img src={logo} alt='hoobank' className='w-[124px] h-[32px]' />
+      <img src={'../assets/logo.svg'} alt='hoobank' className='w-[124px] h-[32px]' />
       <ul className='items-center justify-end flex-1 hidden list-none sm:flex'>
         {navLinks.map((nav, index) => (
           <li
@@ -22,7 +21,7 @@ export default function Navbar() {
 
       <div className='flex items-center justify-end flex-1 sm:hidden'>
         <img
-          src={toogle ? close : menu}
+          src={toogle ? '../assets/close.svg' : '../assets/menu.svg'}
           alt='menu'
           className='w-[28px] h-[28px] object-contain'
           onClick={() => setToogle(!toogle)}

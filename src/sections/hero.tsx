@@ -1,4 +1,3 @@
-import { discount, robot } from '../assets'
 import { GetStarted } from '../components'
 
 export default function Hero() {
@@ -6,7 +5,7 @@ export default function Hero() {
     <section id='home' className='flex flex-col md:flex-row padding-y'>
       <div className='flex-col flex-1 px-6 flex-start xl:px-0 sm:px-16'>
         <div className='flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2'>
-          <img src={discount} alt='discount' className='w-[32px] h-[32px]' />
+          <img src={'../assets/discount.svg'} alt='discount' className='w-[32px] h-[32px]' />
           <p className='ml-2 paragraph'>
             <span className='text-white'>20%</span> Discount For{' '}
             <span className='text-white'>1 Month</span> Account
@@ -33,7 +32,11 @@ export default function Hero() {
       </div>
 
       <div className='relative flex flex-1 my-10 flex-center md:my-0'>
-        <img src={robot} alt='billing' className='w-[100%] h-[100%] relative z-[5]' />
+        <img
+          src={'../assets/robot.png'}
+          alt='billing'
+          className='w-[100%] h-[100%] relative z-[5]'
+        />
         {/* gradient start */}
         <div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient' />
         <div className='absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40' />
