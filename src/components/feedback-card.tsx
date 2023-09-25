@@ -1,3 +1,5 @@
+import quotes from '../assets/quotes.svg'
+
 interface FeedbackCardProps {
   content: string
   name: string
@@ -8,11 +10,7 @@ interface FeedbackCardProps {
 export default function FeedbackCard({ content, name, title, img }: FeedbackCardProps) {
   return (
     <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-20 sm:mr-5 mr-0 my-5 feedback-card'>
-      <img
-        src={'../assets/quotes.svg'}
-        alt='double_quotes'
-        className='w-[42px] h-[27px] object-contain'
-      />
+      <img src={quotes} alt='double_quotes' className='w-[42px] h-[27px] object-contain' />
       <p className='font-poppins font-normal text-[18px] leading-[32px] text-white my-10'>
         {content}
       </p>
