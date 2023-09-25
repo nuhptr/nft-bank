@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
 
 :root {
   --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
@@ -13,6 +14,82 @@
   scroll-behavior: smooth;
 }
 
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* general class */
+.box-width {
+  @apply xl:max-w-[1280px] w-full;
+}
+.heading2 {
+  @apply font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full;
+}
+.paragraph {
+  @apply font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px];
+}
+.flex-center {
+  @apply flex items-center justify-center;
+}
+.flex-start {
+  @apply flex items-start justify-center;
+}
+.padding-x {
+  @apply px-6 sm:px-16;
+}
+.padding-y {
+  @apply py-6 sm:py-16;
+}
+.padding {
+  @apply px-6 py-4 sm:px-16 sm:py-12;
+}
+.margin-x {
+  @apply mx-6 sm:mx-16;
+}
+.margin-y {
+  @apply my-6 sm:my-16;
+}
+
+/* layout */
+.section {
+  @apply flex flex-col md:flex-row padding-y;
+}
+.section-reverse {
+  @apply flex flex-col-reverse md:flex-row padding-y;
+}
+.section-img-reverse {
+  @apply flex-col-reverse flex-1 md:flex-row padding-y;
+}
+.section-img {
+  @apply relative flex flex-1 mt-10 ml-0 flex-center md:ml-10 md:mt-0;
+}
+.section-info {
+  @apply flex-col flex-1 flex-start;
+}
+
+/* feedback */
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+.feedback-card {
+  background: transparent;
+}
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+/* feature */
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+/* gradient */
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
@@ -28,7 +105,6 @@
   background-clip: text;
   text-fill-color: transparent;
 }
-
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -40,30 +116,29 @@
     #33bbcf 90.29%
   );
 }
-
 .bg-black-gradient {
   background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
 }
-
 .bg-black-gradient-2 {
   background: linear-gradient(-168.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
 }
-
 .bg-gray-gradient {
   background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101d 95.11%);
 }
-
 .bg-discount-gradient {
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
-
-.box-shadow {
-  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
 }
-
-.sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
 }
 
 @-webkit-keyframes slide-top {
@@ -76,7 +151,6 @@
     transform: translateY(0);
   }
 }
-
 @keyframes slide-top {
   0% {
     -webkit-transform: translateY(100px);
@@ -86,36 +160,4 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-}
-
-.feature-card:hover {
-  background: var(--black-gradient);
-  box-shadow: var(--card-shadow);
-}
-
-.feedback-container .feedback-card:last-child {
-  margin-right: 0px;
-}
-
-.feedback-card {
-  background: transparent;
-}
-
-.feedback-card:hover {
-  background: var(--black-gradient);
-}
-
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-  filter: blur(123px);
-}
-
-.pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
-}
-
-.white__gradient {
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
 }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import { close, logo, menu } from '../assets'
 import { navLinks } from '../constant'
 
 export default function Navbar() {
-  const [toogle, setToogle] = useState(false)
+  const [toogle, setToogle] = useState<boolean>(false)
 
   return (
     <nav className='flex items-center justify-between w-full py-6 navbar'>

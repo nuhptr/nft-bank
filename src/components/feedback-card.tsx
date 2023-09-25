@@ -1,7 +1,13 @@
-import React from 'react'
 import { quotes } from '../assets'
 
-export default function FeedbackCard({ content, name, title, img }) {
+interface FeedbackCardProps {
+  content: string
+  name: string
+  title: string
+  img: string
+}
+
+export default function FeedbackCard({ content, name, title, img }: FeedbackCardProps) {
   return (
     <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-20 sm:mr-5 mr-0 my-5 feedback-card'>
       <img src={quotes} alt='double_quotes' className='w-[42px] h-[27px] object-contain' />

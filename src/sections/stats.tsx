@@ -1,12 +1,9 @@
-import React from 'react'
-
-import styles from '../style'
 import { stats } from '../constant'
 
 export default function Stats() {
   return (
-    <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6 `}>
-      {stats.map((stat, index) => (
+    <section className='flex-row flex-wrap mb-6 flex-center sm:mb-20'>
+      {stats.map((stat) => (
         <div key={stat.id} className={`flex-1 flex justify-start items-center flex-row m-3`}>
           <h4 className='font-poppins font-semibold xs:text-[40.89px] text-[30.89px] xs:leading-[53.16px] leading-[43.16px] text-white mr-4'>
             {stat.value}
