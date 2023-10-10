@@ -1,4 +1,4 @@
-#  Hoobank | React + TypeScript + Vite
+#  Hoobank
 
 ![Hoobank](https://github.com/nuhptr/react-hoobank-website/assets/50306963/9632a510-1093-4875-9a5b-670a2c7048ce)
 
