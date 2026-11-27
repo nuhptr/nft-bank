@@ -1,4 +1,4 @@
-# HooBank (Astro + Tailwind CSS v4)
+# hoo-wallet (Astro + Tailwind CSS v4)
 
 Modern fintech landing page built with **Astro**, **Tailwind CSS v4**, and **MVVM + SOLID** architecture.
 
