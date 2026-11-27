@@ -1,0 +1,21 @@
+---
+import ActionButton from "@views/components/ActionButton.astro"
+import type { CtaContent } from "@models/landing.model"
+
+interface Props {
+    content: CtaContent
+}
+
+const { content } = Astro.props
+---
+
+<section class="flex-center flex-col sm:flex-row gap-10 my-6 sm:my-16 px-6 py-6 sm:px-16 sm:py-12 bg-black-gradient-alt rounded-card shadow-card">
+    <div class="flex flex-1 flex-col gap-5">
+        <h2 class="heading-2">{content.heading}</h2>
+        <p class="paragraph max-w-copy">{content.description}</p>
+    </div>
+
+    <div class="flex-center">
+        <ActionButton label={content.ctaLabel} href={content.ctaHref} />
+    </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import Billing from "@views/sections/Billing.astro"
+import Business from "@views/sections/Business.astro"
+import CallToAction from "@views/sections/CallToAction.astro"
+import CardDeal from "@views/sections/CardDeal.astro"
+import Clients from "@views/sections/Clients.astro"
+import Footer from "@views/sections/Footer.astro"
+import Hero from "@views/sections/Hero.astro"
+import Navbar from "@views/sections/Navbar.astro"
+import Stats from "@views/sections/Stats.astro"
+import Testimonials from "@views/sections/Testimonials.astro"
+
+import BaseLayout from "@views/layouts/BaseLayout.astro"
+import { createLandingViewModel } from "@viewmodels/landing.viewmodel"
+
+const vm = createLandingViewModel()
+---
+
+<BaseLayout meta={vm.meta}>
+    <div class="flex-center padding-x bg-primary">
+        <div class="box-width">
+            <Navbar {...vm.navbar} />
+        </div>
+    </div>
+
+    <main>
+        <div class="flex-start bg-primary">
+            <div class="box-width">
+                <Hero content={vm.hero} />
+            </div>
+        </div>
+
+        <div class="flex-start padding-x bg-primary">
+            <div class="box-width">
+                <Stats items={vm.stats} />
+                <Business {...vm.business} />
+                <Billing content={vm.billing} />
+                <CardDeal content={vm.cardDeal} />
+                <Testimonials {...vm.testimonials} />
+                <Clients clients={vm.clients} />
+                <CallToAction content={vm.cta} />
+            </div>
+        </div>
+    </main>
+
+    <div class="flex-start padding-x bg-primary">
+        <div class="box-width">
+            <Footer {...vm.footer} />
+        </div>
+    </div>
+</BaseLayout>

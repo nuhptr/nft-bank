@@ -1,0 +1,45 @@
+@utility bg-blue-gradient {
+    background: var(--gradient-blue);
+}
+
+@utility bg-black-gradient {
+    background: var(--gradient-black);
+}
+
+@utility bg-black-gradient-alt {
+    background: var(--gradient-black-alt);
+}
+
+@utility bg-discount-gradient {
+    background: var(--gradient-discount);
+}
+
+@layer components {
+    .text-gradient {
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .ambient-glow {
+        @apply absolute pointer-events-none select-none;
+    }
+
+    .ambient-glow--pink {
+        background: var(--gradient-pink-glow);
+        filter: blur(900px);
+    }
+
+    .ambient-glow--white {
+        background: var(--gradient-white-glow);
+        filter: blur(750px);
+        @apply rounded-full;
+    }
+
+    .ambient-glow--blue {
+        background: var(--gradient-blue-glow);
+        filter: blur(123px);
+    }
+}

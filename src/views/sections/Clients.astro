@@ -1,0 +1,26 @@
+---
+import type { ClientBrand } from "@models/landing.model"
+
+interface Props {
+    clients: readonly ClientBrand[]
+}
+
+const { clients } = Astro.props
+---
+
+<section class="flex-center my-4" aria-label="Trusted partners">
+    <ul class="flex flex-wrap items-center justify-center gap-6 w-full">
+        {clients.map((client) => (
+            <li class="flex flex-1 basis-30 sm:min-w-48 flex-center">
+                <img
+                    src={client.logo.src}
+                    alt={client.logo.alt}
+                    width={client.logo.width}
+                    height={client.logo.height}
+                    loading="lazy"
+                    class="w-25 sm:w-48 h-auto object-contain"
+                />
+            </li>
+        ))}
+    </ul>
+</section>

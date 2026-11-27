@@ -1,0 +1,28 @@
+---
+interface Props {
+  href?: string
+}
+
+const { href = '#features' } = Astro.props
+---
+
+<a href={href} class="get-started-badge" aria-label="Get Started">
+  <span class="flex-center flex-col gap-1 bg-primary w-full h-full rounded-full">
+    <span class="flex flex-row items-center justify-center gap-1.5">
+      <span class="font-sans font-medium text-lg leading-none text-gradient">
+        Get
+      </span>
+      <img
+        src="/arrow-up.svg"
+        alt=""
+        aria-hidden="true"
+        width="23"
+        height="23"
+        class="w-5.75 h-5.75 object-contain"
+      />
+    </span>
+    <span class="font-sans font-medium text-lg leading-none text-gradient">
+      Started
+    </span>
+  </span>
+</a>

@@ -1,0 +1,33 @@
+---
+import type { FeatureItem } from "@models/landing.model"
+
+/**
+ * FeatureCard (SRP & ISP):
+ * Renders a single feature item; depends only on FeatureItem contract.
+ */
+interface Props {
+    feature: FeatureItem
+}
+
+const { feature } = Astro.props
+---
+
+<article class="feature-card">
+    <div class="w-16 h-16 shrink-0 rounded-full flex-center bg-dim-blue">
+        <img
+            src={feature.icon}
+            alt={feature.iconAlt}
+            width="32"
+            height="32"
+            loading="lazy"
+            class="w-1/2 h-1/2 object-contain"
+        />
+    </div>
+
+    <div class="flex flex-1 flex-col gap-1">
+        <h3 class="font-sans font-semibold text-white text-lg leading-snug">{feature.title}</h3>
+        <p class="font-sans font-normal text-dim-white text-base leading-relaxed">
+            {feature.content}
+        </p>
+    </div>
+</article>

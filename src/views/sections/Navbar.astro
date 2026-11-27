@@ -1,0 +1,67 @@
+---
+import type { ImageAsset, NavLink } from "@models/landing.model"
+import { Astronav, CloseIcon, MenuIcon, MenuItems, OpenIcon } from "astro-navbar"
+
+interface Props {
+    logo: ImageAsset
+    links: readonly NavLink[]
+}
+
+const { logo, links } = Astro.props
+---
+
+<header class="site-header">
+    <Astronav closeOnClick>
+        <div class="flex items-center justify-between w-full">
+            <a class="inline-flex items-center rounded" href="#home" aria-label={logo.alt}>
+                <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    class="w-31 h-8 object-contain"
+                />
+            </a>
+
+            <div class="flex items-center sm:hidden">
+                <MenuIcon class="cursor-pointer">
+                    <OpenIcon>
+                        <img
+                            src="/menu.svg"
+                            alt=""
+                            aria-hidden="true"
+                            width="28"
+                            height="28"
+                            class="w-7 h-7 object-contain"
+                        />
+                    </OpenIcon>
+                    <CloseIcon>
+                        <img
+                            src="/close.svg"
+                            alt=""
+                            aria-hidden="true"
+                            width="28"
+                            height="28"
+                            class="w-7 h-7 object-contain"
+                        />
+                    </CloseIcon>
+                </MenuIcon>
+            </div>
+        </div>
+
+        <MenuItems class="hidden sm:flex site-menu">
+            <ul class="flex flex-col sm:flex-row items-center gap-4 sm:gap-10">
+                {links.map((link) => (
+                    <li>
+                        <a
+                            href={link.href}
+                            class="site-menu__link"
+                            aria-current={link.isCurrent ? "page" : undefined}>
+                            {link.title}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </MenuItems>
+    </Astronav>
+</header>

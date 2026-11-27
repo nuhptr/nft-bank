@@ -1,0 +1,48 @@
+---
+import type { TestimonialItem } from '@models/landing.model'
+
+/**
+ * TestimonialCard (SRP & ISP):
+ * Renders a single customer testimonial; receives only TestimonialItem.
+ */
+interface Props {
+  testimonial: TestimonialItem
+}
+
+const { testimonial } = Astro.props
+---
+
+<article class="feedback-card">
+  <img
+    src="/quotes.svg"
+    alt=""
+    aria-hidden="true"
+    width="42"
+    height="27"
+    loading="lazy"
+    class="w-10.5 h-6.75 object-contain"
+  />
+
+  <p class="font-sans font-normal text-lg leading-relaxed text-white">
+    {testimonial.content}
+  </p>
+
+  <div class="flex flex-row items-center gap-4">
+    <img
+      src={testimonial.avatar.src}
+      alt={testimonial.avatar.alt}
+      width={testimonial.avatar.width}
+      height={testimonial.avatar.height}
+      loading="lazy"
+      class="w-12 h-12 rounded-full object-cover"
+    />
+    <div class="flex flex-col gap-0.5">
+      <h3 class="font-sans font-semibold text-xl leading-snug text-white">
+        {testimonial.name}
+      </h3>
+      <p class="font-sans font-normal text-sm leading-snug text-dim-white">
+        {testimonial.title}
+      </p>
+    </div>
+  </div>
+</article>

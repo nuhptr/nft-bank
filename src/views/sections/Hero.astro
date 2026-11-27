@@ -1,0 +1,69 @@
+---
+import AmbientGlow from "@views/components/AmbientGlow.astro"
+import GetStartedBadge from "@views/components/GetStartedBadge.astro"
+
+import type { HeroContent } from "@models/landing.model"
+
+interface Props {
+    content: HeroContent
+}
+
+const { content } = Astro.props
+---
+
+<section id={content.id} class="flex flex-col md:flex-row padding-y">
+    <div class="flex flex-1 flex-col items-start justify-center gap-5 px-6 sm:px-16 xl:px-0">
+        <div class="inline-flex flex-row items-center gap-2.5 py-2 px-4 bg-discount-gradient rounded-btn">
+            <img
+                src={content.discountIcon.src}
+                alt={content.discountIcon.alt}
+                aria-hidden="true"
+                width={content.discountIcon.width}
+                height={content.discountIcon.height}
+                class="w-8 h-8 shrink-0 object-contain"
+            />
+            <p class="paragraph flex flex-wrap items-center gap-x-1.5">
+                <span class="text-white font-medium">{content.discountHighlight}</span>
+                <span>{content.discountMid}</span>
+                <span class="text-white font-medium">{content.discountDuration}</span>
+                <span>{content.discountSuffix}</span>
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-3 w-full">
+            <div class="flex flex-row items-center justify-between gap-4 w-full">
+                <h1 class="flex flex-1 flex-col gap-2 font-sans font-semibold text-hero-mobile ss:text-hero-desktop leading-none text-white">
+                    <span>{content.headingLineOne}</span>
+                    <span class="text-gradient">{content.headingAccent}</span>
+                </h1>
+                <div class="hidden ss:flex mr-0 md:mr-4">
+                    <GetStartedBadge />
+                </div>
+            </div>
+
+            <p class="font-sans font-semibold text-hero-mobile ss:text-hero-sub leading-none text-white w-full">
+                {content.headingLineTwo}
+            </p>
+        </div>
+
+        <p class="paragraph max-w-copy">{content.description}</p>
+    </div>
+
+    <div class="relative flex flex-1 flex-center my-10 md:my-0">
+        <img
+            src={content.heroImage.src}
+            alt={content.heroImage.alt}
+            width={content.heroImage.width}
+            height={content.heroImage.height}
+            fetchpriority="high"
+            class="relative z-5 w-full h-auto"
+        />
+        <AmbientGlow variant="pink" className="z-0 w-2/5 h-[35%] top-0" />
+        <AmbientGlow variant="white" className="z-1 w-4/5 h-4/5 bottom-40" />
+        <AmbientGlow variant="blue" className="z-0 w-1/2 h-1/2 right-20 bottom-20" />
+    </div>
+
+    <div class="flex-center ss:hidden">
+        <GetStartedBadge />
+    </div>
+</section>

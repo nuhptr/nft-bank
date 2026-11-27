@@ -1,0 +1,56 @@
+---
+import AmbientGlow from "@views/components/AmbientGlow.astro"
+import SplitSection from "@views/components/SplitSection.astro"
+import type { BillingContent } from "@models/landing.model"
+
+interface Props {
+    content: BillingContent
+}
+
+const { content } = Astro.props
+---
+
+<SplitSection id={content.id} reversed>
+    <Fragment slot="media">
+        <img
+            src={content.image.src}
+            alt={content.image.alt}
+            width={content.image.width}
+            height={content.image.height}
+            loading="lazy"
+            class="relative z-5 w-full h-auto"
+        />
+        <AmbientGlow variant="white" className="z-3 -left-1/2 top-0 w-1/2 h-1/2" />
+        <AmbientGlow variant="pink" className="z-0 -left-1/2 bottom-0 w-1/2 h-1/2" />
+    </Fragment>
+
+    <Fragment slot="info">
+        <div class="flex flex-col items-start gap-5">
+            <h2 class="heading-2">
+                <span>{content.headingLineOne}</span>
+                <span>{content.headingLineTwo}</span>
+            </h2>
+            <p class="paragraph max-w-copy">{content.description}</p>
+
+            <div class="flex flex-row flex-wrap gap-5 mt-2 sm:mt-5">
+                {content.storeBadges.map((badge) => (
+                    <a
+                        href={badge.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={badge.label}
+                        class="inline-flex rounded-md transition-transform duration-200 hover:-translate-y-0.5">
+                        <img
+                            src={badge.image.src}
+                            alt={badge.image.alt}
+                            width={badge.image.width}
+                            height={badge.image.height}
+                            loading="lazy"
+                            class="w-32 h-10.5 object-contain"
+                        />
+                    </a>
+                ))}
+            </div>
+        </div>
+    </Fragment>
+</SplitSection>

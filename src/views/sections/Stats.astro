@@ -1,0 +1,24 @@
+---
+import type { StatItem } from "@models/landing.model"
+
+interface Props {
+    items: readonly StatItem[]
+}
+
+const { items } = Astro.props
+---
+
+<section
+    class="flex flex-row flex-wrap flex-center gap-6 mb-6 sm:mb-20"
+    aria-label="Platform statistics">
+    {items.map((stat) => (
+        <div class="flex flex-1 basis-55 flex-row items-center justify-start gap-4">
+            <p class="font-sans font-semibold text-stat-value-mobile xs:text-stat-value-desktop leading-none text-white">
+                {stat.value}
+            </p>
+            <p class="font-sans font-normal text-stat-label-mobile xs:text-stat-label-desktop leading-snug text-gradient uppercase">
+                {stat.title}
+            </p>
+        </div>
+    ))}
+</section>

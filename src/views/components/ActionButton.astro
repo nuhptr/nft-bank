@@ -1,0 +1,25 @@
+---
+/**
+ * ActionButton (OCP & LSP):
+ * Renders an accessible anchor when `href` is provided, or a semantic button otherwise.
+ */
+interface Props {
+    label: string
+    href?: string
+    spaced?: boolean
+    className?: string
+}
+
+const { label, href, spaced = false, className = "" } = Astro.props
+const classes = ["action-btn", spaced ? "mt-10" : "", className].filter(Boolean).join(" ")
+---
+
+{href ? (
+    <a href={href} class={classes}>
+        {label}
+    </a>
+) : (
+    <button type="button" class={classes}>
+        {label}
+    </button>
+)}
