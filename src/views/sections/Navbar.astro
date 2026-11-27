@@ -12,7 +12,7 @@ const { logo, links } = Astro.props
 
 <header class="site-header">
     <Astronav closeOnClick>
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center justify-between w-full sm:w-auto">
             <a class="inline-flex items-center rounded" href="#home" aria-label={logo.alt}>
                 <img
                     src={logo.src}
@@ -49,7 +49,7 @@ const { logo, links } = Astro.props
             </div>
         </div>
 
-        <MenuItems class="hidden sm:flex site-menu">
+        <MenuItems class="hidden sm:flex sm:shrink-0 site-menu">
             <ul class="flex flex-col sm:flex-row items-center gap-4 sm:gap-10">
                 {links.map((link) => (
                     <li>
