@@ -1,90 +1,84 @@
 ---
-import type { FooterContent, FooterLinkGroup, SocialLink } from '@models/landing.model'
+import type { FooterContent, FooterLinkGroup, SocialLink } from "@models/landing.model"
 
 /**
  * Footer (View Layer):
  * Semantic `<footer>` landmark containing brand info, grouped navigation links, copyright, and social icons.
  */
 interface Props {
-  /** Footer logo, tagline, and copyright notice. */
-  content: FooterContent
-  /** Grouped external link columns. */
-  linkGroups: readonly FooterLinkGroup[]
-  /** External social media icon links. */
-  socials: readonly SocialLink[]
+    /** Footer logo, tagline, and copyright notice. */
+    content: FooterContent
+    /** Grouped external link columns. */
+    linkGroups: readonly FooterLinkGroup[]
+    /** External social media icon links. */
+    socials: readonly SocialLink[]
 }
 
 const { content, linkGroups, socials } = Astro.props
 ---
 
 <footer class="flex-center flex-col gap-8 padding-y">
-  <div class="flex flex-col md:flex-row items-start justify-center gap-10 w-full">
-    <div class="flex flex-1 flex-col justify-start gap-4">
-      <img
-        src={content.logo.src}
-        alt={content.logo.alt}
-        width={content.logo.width}
-        height={content.logo.height}
-        loading="lazy"
-        class="w-66.5 h-18 object-contain"
-      />
-      <p class="paragraph max-w-tagline">{content.tagline}</p>
+    <div class="flex flex-col md:flex-row items-start justify-center gap-10 w-full">
+        <div class="flex flex-1 flex-col justify-start gap-4">
+            <img
+                src={content.logo.src}
+                alt={content.logo.alt}
+                width={content.logo.width}
+                height={content.logo.height}
+                loading="lazy"
+                class="w-66.5 h-18 object-contain"
+            />
+            <p class="paragraph max-w-tagline">{content.tagline}</p>
+        </div>
+
+        <div class="flex-[1.5] w-full flex flex-row justify-between flex-wrap gap-6">
+            {linkGroups.map((group) => (
+                <div class="flex flex-col gap-4 min-w-37.5">
+                    <h3 class="font-sans font-medium text-lg leading-snug text-white">
+                        {group.title}
+                    </h3>
+                    <ul class="flex flex-col gap-4">
+                        {group.links.map((link) => (
+                            <li>
+                                <a
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="font-sans font-normal text-base leading-snug text-dim-white hover:text-secondary transition-colors duration-200">
+                                    {link.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
     </div>
 
-    <div class="flex-[1.5] w-full flex flex-row justify-between flex-wrap gap-6">
-      {
-        linkGroups.map((group) => (
-          <div class="flex flex-col gap-4 min-w-37.5">
-            <h3 class="font-sans font-medium text-lg leading-snug text-white">
-              {group.title}
-            </h3>
-            <ul class="flex flex-col gap-4">
-              {group.links.map((link) => (
-                <li>
-                  <a
-                    href={link.href}
+    <div class="w-full flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-border-subtle">
+        <p class="font-sans font-normal text-lg leading-snug text-white text-center md:text-left">
+            {content.copyright}
+        </p>
+
+        <div class="flex flex-row items-center gap-6">
+            {socials.map((social) => (
+                <a
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-sans font-normal text-base leading-snug text-dim-white hover:text-secondary transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+                    aria-label={social.label}
+                    class="inline-flex p-1 rounded transition-transform duration-200 hover:-translate-y-0.5">
+                    <img
+                        src={social.icon}
+                        alt=""
+                        aria-hidden="true"
+                        width="21"
+                        height="21"
+                        loading="lazy"
+                        class="w-5.25 h-5.25 object-contain"
+                    />
+                </a>
+            ))}
+        </div>
     </div>
-  </div>
-
-  <div class="w-full flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-border-subtle">
-    <p class="font-sans font-normal text-lg leading-snug text-white text-center md:text-left">
-      {content.copyright}
-    </p>
-
-    <div class="flex flex-row items-center gap-6">
-      {
-        socials.map((social) => (
-          <a
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.label}
-            class="inline-flex p-1 rounded transition-transform duration-200 hover:-translate-y-0.5"
-          >
-            <img
-              src={social.icon}
-              alt=""
-              aria-hidden="true"
-              width="21"
-              height="21"
-              loading="lazy"
-              class="w-5.25 h-5.25 object-contain"
-            />
-          </a>
-        ))
-      }
-    </div>
-  </div>
 </footer>
