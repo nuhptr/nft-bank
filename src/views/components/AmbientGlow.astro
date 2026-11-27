@@ -1,0 +1,15 @@
+---
+/**
+ * AmbientGlow (OCP):
+ * Decorative blurred radial backdrop closed for modification, open for positioning via className.
+ */
+interface Props {
+    variant: "pink" | "white" | "blue"
+    className?: string
+}
+
+const { variant, className = "" } = Astro.props
+const classes = ["ambient-glow", `ambient-glow--${variant}`, className].filter(Boolean).join(" ")
+---
+
+<div class={classes} aria-hidden="true"></div>

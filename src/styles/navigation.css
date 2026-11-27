@@ -1,0 +1,24 @@
+@layer components {
+    .site-header {
+        @apply relative flex flex-col sm:flex-row sm:items-center sm:justify-between w-full py-6;
+    }
+
+    .site-menu {
+        @apply absolute top-20 right-0 z-20 p-6 min-w-35 rounded-xl border border-white/10 shadow-card sm:static sm:p-0 sm:min-w-0 sm:border-0 sm:rounded-none sm:shadow-none;
+        background: var(--gradient-black);
+    }
+
+    @media (min-width: 768px) {
+        .site-menu {
+            background: transparent;
+        }
+    }
+
+    .site-menu__link {
+        @apply inline-block font-sans font-normal text-base text-dim-white py-1 border-b-2 border-transparent transition-colors duration-200 hover:text-white whitespace-nowrap;
+    }
+
+    .site-menu__link[aria-current="page"] {
+        @apply text-white font-medium border-b-secondary;
+    }
+}

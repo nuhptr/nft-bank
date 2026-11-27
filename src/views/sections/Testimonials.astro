@@ -1,0 +1,30 @@
+---
+import AmbientGlow from '@views/components/AmbientGlow.astro'
+import TestimonialCard from '@views/components/TestimonialCard.astro'
+import type { TestimonialItem, TestimonialsContent } from '@models/landing.model'
+
+interface Props {
+  content: TestimonialsContent
+  items: readonly TestimonialItem[]
+}
+
+const { content, items } = Astro.props
+---
+
+<section id={content.id} class="relative flex-col flex-center padding-y">
+  <AmbientGlow variant="blue" className="z-0 w-3/5 h-3/5 -right-1/2 rounded-full" />
+
+  <div class="relative z-1 w-full flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6 sm:mb-16">
+    <h2 class="heading-2">
+      <span>{content.headingLineOne}</span>
+      <span>{content.headingLineTwo}</span>
+    </h2>
+    <div class="w-full max-w-copy md:ml-10">
+      <p class="paragraph text-left">{content.description}</p>
+    </div>
+  </div>
+
+  <div class="relative z-1 flex flex-wrap justify-between sm:justify-start md:justify-between gap-5 sm:gap-6 md:gap-10 w-full">
+    {items.map((testimonial) => <TestimonialCard testimonial={testimonial} />)}
+  </div>
+</section>

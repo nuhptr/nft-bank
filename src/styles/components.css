@@ -1,0 +1,79 @@
+@layer components {
+    /* Typography */
+    .heading-2 {
+        @apply flex flex-col gap-2 font-sans font-semibold text-heading-mobile xs:text-heading-desktop leading-none text-white w-full;
+    }
+
+    .paragraph {
+        @apply font-sans font-normal text-dim-white text-lg leading-relaxed;
+    }
+
+    /* Layout */
+    .box-width {
+        @apply w-full xl:max-w-7xl;
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .flex-start {
+        @apply flex items-start justify-center;
+    }
+
+    .padding-x {
+        @apply px-6 sm:px-16;
+    }
+
+    .padding-y {
+        @apply py-6 sm:py-16;
+    }
+
+    .section-split {
+        @apply flex flex-col md:flex-row md:items-center py-6 sm:py-16;
+    }
+
+    .section-split-reverse {
+        @apply flex flex-col-reverse md:flex-row md:items-center py-6 sm:py-16;
+    }
+
+    .section-info {
+        @apply flex flex-1 flex-col items-start justify-center;
+    }
+
+    .section-media {
+        @apply relative flex flex-1 items-center justify-center mt-10 ml-0 md:mt-0 md:ml-10;
+    }
+
+    .section-media-reverse {
+        @apply relative flex flex-1 items-center justify-center mt-10 ml-0 md:mt-0 md:mr-10;
+    }
+
+    /* Buttons */
+    .action-btn {
+        @apply inline-flex items-center justify-center py-4 px-6 rounded-btn font-sans font-medium text-lg text-primary bg-blue-gradient transition duration-200 hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer;
+    }
+
+    .get-started-badge {
+        @apply inline-flex items-center justify-center w-35 h-35 p-0.5 rounded-full bg-blue-gradient transition-transform duration-200 hover:scale-105 cursor-pointer;
+    }
+
+    /* Cards */
+    .feature-card {
+        @apply flex flex-row items-center gap-3 p-6 rounded-card transition duration-200;
+    }
+
+    .feature-card:hover {
+        background: var(--gradient-black);
+        box-shadow: var(--shadow-card);
+    }
+
+    .feedback-card {
+        @apply flex flex-col justify-between gap-10 flex-1 basis-75 max-w-card px-10 py-12 rounded-card bg-transparent transition duration-200;
+    }
+
+    .feedback-card:hover {
+        background: var(--gradient-black);
+        box-shadow: var(--shadow-card);
+    }
+}

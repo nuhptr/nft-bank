@@ -1,0 +1,42 @@
+---
+/**
+ * SplitSection (OCP):
+ * Reusable two-column responsive layout open for extension via named `info` and `media` slots.
+ */
+interface Props {
+    id?: string
+    reversed?: boolean
+    stackedMedia?: boolean
+}
+
+const { id, reversed = false, stackedMedia = false } = Astro.props
+const sectionClass = reversed ? "section-split-reverse" : "section-split"
+const mediaClass = [
+    reversed ? "section-media-reverse" : "section-media",
+    stackedMedia ? "flex-col items-stretch" : "",
+]
+    .filter(Boolean)
+    .join(" ")
+---
+
+<section id={id} class={sectionClass}>
+    {reversed ? (
+        <>
+            <div class={mediaClass}>
+                <slot name="media" />
+            </div>
+            <div class="section-info">
+                <slot name="info" />
+            </div>
+        </>
+    ) : (
+        <>
+            <div class="section-info">
+                <slot name="info" />
+            </div>
+            <div class={mediaClass}>
+                <slot name="media" />
+            </div>
+        </>
+    )}
+</section>
