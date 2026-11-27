@@ -11,7 +11,7 @@ export const LANDING_DATA: ILandingModel = {
         keywords: "astro, bank, fintech, payments, tailwindcss",
         author: "Adi Nugraha Putra",
         brandName: "HooBank",
-        logo: { src: "/logo.svg", alt: "HooBank", width: 124, height: 32 },
+        logo: { src: "/brand/logo.svg", alt: "HooBank", width: 124, height: 32 },
     },
 
     navLinks: [
@@ -27,14 +27,14 @@ export const LANDING_DATA: ILandingModel = {
         discountMid: "Discount For",
         discountDuration: "1 Month",
         discountSuffix: "Account",
-        discountIcon: { src: "/discount.svg", alt: "", width: 32, height: 32 },
+        discountIcon: { src: "/icons/discount.svg", alt: "", width: 32, height: 32 },
         headingLineOne: "The Next",
         headingAccent: "Generation",
         headingLineTwo: "Payment Method.",
         description:
             "Our team of experts uses a methodology to identify the credit cards most likely to fit your needs. We examine annual percentage rates, annual fees.",
         heroImage: {
-            src: "/robot.png",
+            src: "/illustrations/robot.png",
             alt: "Futuristic robotic hand holding floating payment cards",
             width: 1338,
             height: 1348,
@@ -60,7 +60,7 @@ export const LANDING_DATA: ILandingModel = {
     features: [
         {
             id: "feature-1",
-            icon: "/star.svg",
+            icon: "/icons/star.svg",
             iconAlt: "Rewards star icon",
             title: "Rewards",
             content:
@@ -68,7 +68,7 @@ export const LANDING_DATA: ILandingModel = {
         },
         {
             id: "feature-2",
-            icon: "/shield.svg",
+            icon: "/icons/shield.svg",
             iconAlt: "Security shield icon",
             title: "100% Secured",
             content:
@@ -76,7 +76,7 @@ export const LANDING_DATA: ILandingModel = {
         },
         {
             id: "feature-3",
-            icon: "/send.svg",
+            icon: "/icons/send.svg",
             iconAlt: "Balance transfer icon",
             title: "Balance Transfer",
             content:
@@ -91,7 +91,7 @@ export const LANDING_DATA: ILandingModel = {
         description:
             "We can easily control your billing and invoice without you thinking about it, so don't worry about forget it. We can help you.",
         image: {
-            src: "/bill.png",
+            src: "/illustrations/bill.png",
             alt: "Billing and invoicing dashboard preview",
             width: 1120,
             height: 1038,
@@ -101,13 +101,13 @@ export const LANDING_DATA: ILandingModel = {
                 id: "apple-store",
                 label: "Download on the App Store",
                 href: "https://www.apple.com/app-store/",
-                image: { src: "/apple.svg", alt: "App Store", width: 128, height: 42 },
+                image: { src: "/badges/apple.svg", alt: "App Store", width: 128, height: 42 },
             },
             {
                 id: "google-play",
                 label: "Get it on Google Play",
                 href: "https://play.google.com/",
-                image: { src: "/google.svg", alt: "Google Play", width: 128, height: 42 },
+                image: { src: "/badges/google.svg", alt: "Google Play", width: 128, height: 42 },
             },
         ],
     },
@@ -120,7 +120,7 @@ export const LANDING_DATA: ILandingModel = {
         ctaLabel: "Get Started",
         ctaHref: "#clients",
         image: {
-            src: "/card.png",
+            src: "/illustrations/card.png",
             alt: "Card deal analysis preview",
             width: 1026,
             height: 899,
@@ -142,14 +142,14 @@ export const LANDING_DATA: ILandingModel = {
                 "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
             name: "Herman Jensen",
             title: "Founder & Leader",
-            avatar: { src: "/people01.png", alt: "Herman Jensen", width: 48, height: 48 },
+            avatar: { src: "/avatars/people01.png", alt: "Herman Jensen", width: 48, height: 48 },
         },
         {
             id: "feedback-2",
             content: "Money makes your life easier. If you're lucky to have it, you're lucky.",
             name: "Steve Mark",
             title: "Founder & Leader",
-            avatar: { src: "/people02.png", alt: "Steve Mark", width: 48, height: 48 },
+            avatar: { src: "/avatars/people02.png", alt: "Steve Mark", width: 48, height: 48 },
         },
         {
             id: "feedback-3",
@@ -157,7 +157,7 @@ export const LANDING_DATA: ILandingModel = {
                 "It is usually people in the money business, finance, and international trade that are really rich.",
             name: "Kenn Gallagher",
             title: "Founder & Leader",
-            avatar: { src: "/people03.png", alt: "Kenn Gallagher", width: 48, height: 48 },
+            avatar: { src: "/avatars/people03.png", alt: "Kenn Gallagher", width: 48, height: 48 },
         },
     ],
 
@@ -165,22 +165,22 @@ export const LANDING_DATA: ILandingModel = {
         {
             id: "client-1",
             name: "Airbnb",
-            logo: { src: "/airbnb.png", alt: "Airbnb", width: 386, height: 120 },
+            logo: { src: "/partners/airbnb.png", alt: "Airbnb", width: 386, height: 120 },
         },
         {
             id: "client-2",
             name: "Binance",
-            logo: { src: "/binance.png", alt: "Binance", width: 385, height: 78 },
+            logo: { src: "/partners/binance.png", alt: "Binance", width: 385, height: 78 },
         },
         {
             id: "client-3",
             name: "Coinbase",
-            logo: { src: "/coinbase.png", alt: "Coinbase", width: 379, height: 83 },
+            logo: { src: "/partners/coinbase.png", alt: "Coinbase", width: 379, height: 83 },
         },
         {
             id: "client-4",
             name: "Dropbox",
-            logo: { src: "/dropbox.png", alt: "Dropbox", width: 386, height: 76 },
+            logo: { src: "/partners/dropbox.png", alt: "Dropbox", width: 386, height: 76 },
         },
     ],
 
@@ -193,7 +193,7 @@ export const LANDING_DATA: ILandingModel = {
     },
 
     footer: {
-        logo: { src: "/logo.svg", alt: "HooBank", width: 266, height: 72 },
+        logo: { src: "/brand/logo.svg", alt: "HooBank", width: 266, height: 72 },
         tagline: "A new way to make the payments easy, reliable and secure.",
         copyright: "Copyright © 2021 HooBank. All Rights Reserved.",
     },
@@ -232,25 +232,25 @@ export const LANDING_DATA: ILandingModel = {
         {
             id: "social-media-1",
             label: "Instagram",
-            icon: "/instagram.svg",
+            icon: "/socials/instagram.svg",
             href: "https://www.instagram.com/",
         },
         {
             id: "social-media-2",
             label: "Facebook",
-            icon: "/facebook.svg",
+            icon: "/socials/facebook.svg",
             href: "https://www.facebook.com/",
         },
         {
             id: "social-media-3",
             label: "Twitter",
-            icon: "/twitter.svg",
+            icon: "/socials/twitter.svg",
             href: "https://www.twitter.com/",
         },
         {
             id: "social-media-4",
             label: "LinkedIn",
-            icon: "/linkedin.svg",
+            icon: "/socials/linkedin.svg",
             href: "https://www.linkedin.com/",
         },
     ],
