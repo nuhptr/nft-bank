@@ -2,7 +2,12 @@
 import type { SiteMeta } from '@models/landing.model'
 import '@styles/index.css'
 
+/**
+ * BaseLayout (View Layer):
+ * Root HTML document shell loading Manrope typography, SEO metadata, and global Tailwind CSS v4 styles.
+ */
 interface Props {
+  /** Global site metadata injected into `<head>`. */
   meta: SiteMeta
 }
 

@@ -1,3 +1,8 @@
+/**
+ * @file Shared UI component primitives stylesheet (`@layer components`).
+ * Defines reusable typography presets, container/split-section layout helpers,
+ * action buttons, Get Started badge, and feature/testimonial card surfaces.
+ */
 @layer components {
     /* Typography */
     .heading-2 {

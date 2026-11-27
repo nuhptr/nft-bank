@@ -3,9 +3,15 @@ import AmbientGlow from '@views/components/AmbientGlow.astro'
 import TestimonialCard from '@views/components/TestimonialCard.astro'
 import type { TestimonialItem, TestimonialsContent } from '@models/landing.model'
 
+/**
+ * Testimonials (View Layer):
+ * Customer feedback section rendering header copy and a responsive grid of `TestimonialCard` items.
+ */
 interface Props {
-  content: TestimonialsContent
-  items: readonly TestimonialItem[]
+    /** Section heading and lead description. */
+    content: TestimonialsContent
+    /** Customer testimonials rendered as cards. */
+    items: readonly TestimonialItem[]
 }
 
 const { content, items } = Astro.props

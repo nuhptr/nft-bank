@@ -1,3 +1,8 @@
+/**
+ * @file Visual effects stylesheet.
+ * Registers custom Tailwind v4 `@utility` background gradients, `.text-gradient`,
+ * and decorative `.ambient-glow` radial blur backdrops.
+ */
 @utility bg-blue-gradient {
     background: var(--gradient-blue);
 }

@@ -1,9 +1,16 @@
 ---
 import type { FooterContent, FooterLinkGroup, SocialLink } from '@models/landing.model'
 
+/**
+ * Footer (View Layer):
+ * Semantic `<footer>` landmark containing brand info, grouped navigation links, copyright, and social icons.
+ */
 interface Props {
+  /** Footer logo, tagline, and copyright notice. */
   content: FooterContent
+  /** Grouped external link columns. */
   linkGroups: readonly FooterLinkGroup[]
+  /** External social media icon links. */
   socials: readonly SocialLink[]
 }
 

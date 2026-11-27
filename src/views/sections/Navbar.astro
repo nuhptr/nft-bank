@@ -2,8 +2,15 @@
 import type { ImageAsset, NavLink } from "@models/landing.model"
 import { Astronav, CloseIcon, MenuIcon, MenuItems, OpenIcon } from "astro-navbar"
 
+/**
+ * Navbar (View Layer):
+ * Responsive primary site navigation powered by `astro-navbar`, switching between
+ * a collapsible mobile dropdown and an inline desktop menu bar.
+ */
 interface Props {
+    /** Brand logo asset linked to the top `#home` anchor. */
     logo: ImageAsset
+    /** Primary navigation links rendered inside `<MenuItems>`. */
     links: readonly NavLink[]
 }
 
