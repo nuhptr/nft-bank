@@ -13,6 +13,10 @@ import Testimonials from "@views/sections/Testimonials.astro"
 import BaseLayout from "@views/layouts/BaseLayout.astro"
 import { createLandingViewModel } from "@viewmodels/landing.viewmodel"
 
+/**
+ * @file Landing page route entrypoint (`/`).
+ * Instantiates {@link LandingViewModel} and binds each prop slice to its Astro View section.
+ */
 const vm = createLandingViewModel()
 ---
 

@@ -1,7 +1,12 @@
 ---
 import type { StatItem } from "@models/landing.model"
 
+/**
+ * Stats (View Layer):
+ * Horizontal wrap strip displaying key platform metrics (users, partner companies, transactions).
+ */
 interface Props {
+    /** Ordered list of metric items to display. */
     items: readonly StatItem[]
 }
 

@@ -1,5 +1,9 @@
+/**
+ * @file Static data source implementing {@link ILandingModel} for the hoo-wallet landing page.
+ */
 import type { ILandingModel } from "@models/landing.model"
 
+/** Default immutable landing page dataset injected into `LandingViewModel`. */
 export const LANDING_DATA: ILandingModel = {
     meta: {
         title: "Hoobank | Home",

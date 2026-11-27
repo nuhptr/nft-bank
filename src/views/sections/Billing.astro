@@ -3,7 +3,12 @@ import AmbientGlow from "@views/components/AmbientGlow.astro"
 import SplitSection from "@views/components/SplitSection.astro"
 import type { BillingContent } from "@models/landing.model"
 
+/**
+ * Billing (View Layer):
+ * Reversed split section showcasing the billing dashboard preview alongside App Store and Google Play links.
+ */
 interface Props {
+    /** Billing copy, dashboard illustration, and external store badge links. */
     content: BillingContent
 }
 

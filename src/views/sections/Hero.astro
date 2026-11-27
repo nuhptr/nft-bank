@@ -4,7 +4,13 @@ import GetStartedBadge from "@views/components/GetStartedBadge.astro"
 
 import type { HeroContent } from "@models/landing.model"
 
+/**
+ * Hero (View Layer):
+ * Above-the-fold landing banner featuring the discount badge, headline, `GetStartedBadge`,
+ * and LCP-prioritized hero illustration (`fetchpriority="high"`).
+ */
 interface Props {
+    /** Hero copy, discount badge, and illustration asset contract. */
     content: HeroContent
 }
 

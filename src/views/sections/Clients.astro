@@ -1,7 +1,12 @@
 ---
 import type { ClientBrand } from "@models/landing.model"
 
+/**
+ * Clients (View Layer):
+ * Partner logo strip displaying trusted client brands with lazy-loaded images.
+ */
 interface Props {
+    /** Partner brand logos to render. */
     clients: readonly ClientBrand[]
 }
 

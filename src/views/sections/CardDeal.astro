@@ -3,7 +3,12 @@ import ActionButton from "@views/components/ActionButton.astro"
 import SplitSection from "@views/components/SplitSection.astro"
 import type { CardDealContent } from "@models/landing.model"
 
+/**
+ * CardDeal (View Layer):
+ * Split section highlighting card deal comparison with a CTA button and illustration.
+ */
 interface Props {
+    /** Card deal copy, CTA link, and preview illustration. */
     content: CardDealContent
 }
 

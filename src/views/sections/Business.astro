@@ -4,8 +4,14 @@ import FeatureCard from "@views/components/FeatureCard.astro"
 import SplitSection from "@views/components/SplitSection.astro"
 import type { BusinessContent, FeatureItem } from "@models/landing.model"
 
+/**
+ * Business (View Layer):
+ * Value-proposition split section pairing copy and CTA with stacked `FeatureCard` items.
+ */
 interface Props {
+    /** Section heading, description, and CTA metadata. */
     content: BusinessContent
+    /** Feature highlight items rendered in the right column. */
     features: readonly FeatureItem[]
 }
 
